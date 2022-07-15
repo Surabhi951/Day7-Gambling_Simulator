@@ -13,19 +13,17 @@ public class GamblingSimulator {
             while (stake > 50 && stake < 150) {
                 double gameCheck = Math.floor(Math.random() * 10) % 2;
                 if (bet == gameCheck) {
-                    //System.out.println("you won the game");
                     stake++;
                 } else {
-                    //System.out.println("you lost the game");
                     stake--;
                 }
             }
             if (stake == 50) {
                 loss++;
-                System.out.println("Day " + day + " Lost ");
+                System.out.println("Day " + day + " is a unlucky day where he lost Maximum ");
             } else {
                 wins++;
-                System.out.println("Day " + day + " Won ");
+                System.out.println("Day " + day + " is a lucky day where he won maximum ");
             }
             totalAmount = totalAmount + stake;
         }
